@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Welcome to CRAIGSLIST Jr!</h1>
+    <h2> CATEGORIES <h2>
+    <p><% Category.all.each do |x| %>
+        <a href="/categories/<%= x.id %>/posts"><%= x.title %></a>
+        <%end%>
+    </p>
+</div>
+
+

@@ -1,0 +1,24 @@
+<div class="container">
+hello
+<center><h3><%= @post.title %></h3></center>
+
+<form action="/update_post/<%= @post.id %>" method="post">
+
+  <input name="_method" value="put" type="hidden"/>
+
+  <b>Title:</b> <input type="text" name="test[title]" value="<%= @post.title %>"> <br>
+  <b>Description:</b> <input type="text" name="test[description]" value="<%= @post.description %>"><br>
+  <b>Email:</b> <input type="text" name="test[email]" value="<%= @post.email %>"><br>
+  <b>Category:</b>
+  <select name='category_id'>
+    <% Category.all.each do |category| %>
+      <option value='<%= category.id %>'><%= category.title %></option>
+    <% end %>
+  </select>
+  <br>
+  <input type="submit" value="Update Post">
+</form>
+
+</div>
+
+hey ladies

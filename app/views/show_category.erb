@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Welcome to Posts of <b><%= @category.title %></b>!</h1>
+  <p><% @posts.each do |x|%>
+    <%= p x.title %>
+    <a href = "/posts/<%= x.id %>">View</a>
+    <a href = "/posts/<%= x.id %>/edit">Edit</a>
+  <%end%>
+  </p>
+
+  <p>Create new Post for this category:<a href = "/categories/<%= @category.id %>/posts/new">New</a></p>
+
+<div>
+
+
+
+
+<!-- <p>URL parameters:</p>
+<%= params %> -->
